@@ -1,0 +1,67 @@
+1.- Obtener ubicación automática. --> TERMINADO
+http://www.androidcurso.com/index.php/recursos-didacticos/tutoriales-android/41-unidad-7-seguridad-y-posicionamiento/223-google-maps-api-v2
+
+2.-Determinar si en la pantalla del mapa se deben incluir botones.
+http://www.androidcurso.com/index.php/recursos-didacticos/tutoriales-android/41-unidad-7-seguridad-y-posicionamiento/223-google-maps-api-v2
+
+3.- Agregar marcador al dar click en el mapa --> TERMINADO
+map.setOnMapLongClickListener(new OnMapLongClickListener() {
+
+            @Override
+            public void onMapLongClick(LatLng latLng) {
+                for(Marker marker : yourMarkerList) {
+                    if(Math.abs(marker.getPosition().latitude - latLng.latitude) < 0.05 && Math.abs(marker.getPosition().longitude - latLng.longitude) < 0.05) {
+                        Toast.makeText(MapActivity.this, "got clicked", Toast.LENGTH_SHORT).show(); //do some stuff
+                        break;
+                    }
+                }
+
+            }
+        });
+
+4.- Cambiar icono al dar click en un marcador (Revisar si aplica)
+
+5.- Agregar formulario en un Activity
+
+6.- Crear clientes de WS desde Android con JSON (REST).
+http://mobiforge.com/developing/story/consuming-json-services-android-apps
+
+7.- Determinar si con latitud y longitud se puede obtener la dirección.
+
+8.- Terminar el desarrollo del Web Service
+http://www.mihogar.mx/recicladf/webService.php
+
+9.- Cambiar icono del App --> TERMINADO
+
+10.- Obtener ubicación en el mapa --> TERMINADO
+
+
+DATOS DE CONEXION:
+
+MIHOGAR.MX
+
+ACCESO FTP
+URL: ftp.mihogar.mx     
+Usuario: u251968 
+Password: ymnM1s#* 
+
+ACCESO AL PANEL DE ADMINISTRACIÓN
+URL: http://www.mihogar.mx:2082     Mientras tu dominio resuelve puedes usar http://65.99.225.72:2082
+Usuario: u251968 
+Password: recicladf 
+
+El servidor POP es: mail.mihogar.mx 
+El servidor SMTP es: mail.mihogar.mx 
+
+Los DNS que debes asignar a tu dominio para que resuelva hacia este hosting son:
+ns143.neubox.net 
+ns144.neubox.net 
+Si tu dominio fue registrado con Neubox puedes asignar los DNS desde el panel de clientes:
+https://neubox.net/clientes
+
+Recibe un cordial saludo
+NEUBOX Internet SA de CV
+ventas@neubox.net
+
+
+
