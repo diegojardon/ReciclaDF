@@ -1,13 +1,13 @@
 <?php
 	//validamos que la variable no sea null
 	//$accion = $_POST["id"]) ? $_POST["id"] : "";
-	
+	$accion = "login";
 	
 	//conexion a Base de Datos
 	$link = mysql_connect("localhost","u251968_recicla","r3c1cla");
 	mysql_select_db("u251968_recicladf",$link);
 	
-	$result = mysql_query("SELECT idCentro, nombreCentro, papelCentro, plasticoCentro, bateriaCentro, metalCentro, vidrioCentro, latitudCentro, longitudCentro FROM CentroReciclaje",$link);
+	/*$result = mysql_query("SELECT idCentro, nombreCentro, papelCentro, plasticoCentro, bateriaCentro, metalCentro, vidrioCentro, latitudCentro, longitudCentro FROM CentroReciclaje",$link);
 		while ($filaCentro = mysql_fetch_assoc($result)) {
 			$resultado["centro"]["id"] = $filaCentro["idCentro"];
 			$resultado["centro"]["nombre"] = $filaCentro["nombreCentro"];
@@ -19,7 +19,17 @@
 			$resultado["centro"]["lat"] = $filaCentro["latitudCentro"];
 			$resultado["centro"]["lon"] = $filaCentro["longitudCentro"];
 		}
-		echo json_encode($resultado)
+		echo json_encode($resultado)*/
+		
+	switch($accion){
+		case "login":
+			echo "login";
+		break;
+		default:
+			echo "default";
+		break;
+	}
+	
 	
 	
 	/*function iniciarSesion(){
