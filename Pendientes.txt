@@ -38,6 +38,10 @@ http://www.mihogar.mx/recicladf/webService.php
 11.- Id de cada marcador
 http://stackoverflow.com/questions/15368028/getting-a-map-marker-by-its-id-in-google-maps-v2
 
+12.- Obtener polilinea para de ubicación actual y el destino
+https://developers.google.com/maps/documentation/directions/?hl=es
+http://maps.googleapis.com/maps/api/directions/json?origin=19.318697,-99.086855&destination=19.439076,-99.20554&sensor=true
+
 
 DATOS DE CONEXION:
 

@@ -21,8 +21,7 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapaActivity extends Activity implements OnMapClickListener, OnMarkerDragListener,
-													  //LocationListener, OnInfoWindowClickListener{
-														OnInfoWindowClickListener{
+													  LocationListener, OnInfoWindowClickListener{
 
 	//static final LatLng PLAZA_CARSO = new LatLng(19.44207,-99.203628);
 	
@@ -52,11 +51,11 @@ public class MapaActivity extends Activity implements OnMapClickListener, OnMark
         	String provider = service.getBestProvider(criteria, false);
         	Location location = service.getLastKnownLocation(provider);
         	
-        	/*if(location!=null){
+        	if(location!=null){
                 onLocationChanged(location);
             }
         	//Solicitar actualización de la ubicación cada 6 horas y 0 metros
-            service.requestLocationUpdates(provider,6*60*60*1000, 0, this);*/
+            service.requestLocationUpdates(provider,6*60*60*1000, 0, this);
         	
         	LatLng miUbicacion = new LatLng(location.getLatitude(),location.getLongitude());
         	//if (map.getMyLocation() != null){        	
@@ -112,7 +111,7 @@ public class MapaActivity extends Activity implements OnMapClickListener, OnMark
      
     }
    
-  /*
+  
     @Override
     public void onLocationChanged(Location location) {
 
@@ -152,7 +151,7 @@ public class MapaActivity extends Activity implements OnMapClickListener, OnMark
     @Override
     public void onStatusChanged(String provider, int status, Bundle extras) {
         // TODO Auto-generated method stub
-    }*/
+    }
 
 
 	@Override
