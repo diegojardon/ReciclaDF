@@ -4,5 +4,40 @@
     <string name="app_name">ReciclaDF</string>
     <string name="action_settings">Centros de Reciclaje</string>
     <string name="hello_world">Hello world!</string>
+    <string name="boton1">Comentar</string>
+    <string name="direccion">Dirección</string>
+    <string name="title_activity_agregar_centro">Agregar Centro de Reciclaje</string>
+    <string name="delegacionDefault">Selecciona</string>
+
+    <string-array name="delegacion">
+        <item>Álvaro Obregón</item>
+        <item>Azcapotzalco</item>
+        <item>Benito Juárez</item>
+        <item>Coyoacán</item>
+        <item>Cuajimalpa</item>
+        <item>Cuauhtémoc</item>
+        <item>Gustavo A. Madero</item>
+        <item>Iztacalco</item>
+        <item>Iztapalapa</item>
+        <item>Magdalena Contreras</item>
+        <item>Miguel Hidalgo</item>
+        <item>Milpa Alta</item>
+        <item>Tláhuac</item>
+        <item>Tlalpan</item>
+        <item>Venustiano Carranza</item>
+        <item>Xochimilco</item>
+    </string-array>
+
+    <string name="title_activity_comentarios">Comentarios</string>
+    <string name="labelNombre">Nombre:</string>
+    <string name="labelCalle">Calle:</string>
+    <string name="labelColonia">Colonia:</string>
+    <string name="labelTelefono">Teléfono:</string>
+    <string name="labelCentro">Centro</string>
+    <string name="calificaCentro">Califica este centro</string>
+    
+    <string name="buttonAgregar">Agregar</string>
+    <string name="buttonCancelar">Cancelar</string>
+    <string name="buttonComentar">Comentar</string>
 
 </resources>

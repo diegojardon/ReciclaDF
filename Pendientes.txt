@@ -1,7 +1,7 @@
 1.- Obtener ubicación automática. --> TERMINADO
 http://www.androidcurso.com/index.php/recursos-didacticos/tutoriales-android/41-unidad-7-seguridad-y-posicionamiento/223-google-maps-api-v2
 
-2.-Determinar si en la pantalla del mapa se deben incluir botones.
+2.-Determinar si en la pantalla del mapa se deben incluir botones. --> TERMINADO
 http://www.androidcurso.com/index.php/recursos-didacticos/tutoriales-android/41-unidad-7-seguridad-y-posicionamiento/223-google-maps-api-v2
 
 3.- Agregar marcador al dar click en el mapa --> TERMINADO
@@ -19,14 +19,16 @@ map.setOnMapLongClickListener(new OnMapLongClickListener() {
             }
         });
 
-4.- Cambiar icono al dar click en un marcador (Revisar si aplica)
+4.- Cambiar icono al dar click en un marcador (Revisar si aplica) --> NO APLICA
 
-5.- Agregar formulario en un Activity
+5.- Agregar formulario en un Activity --> TERMINADO (SOLO EL DISEÑO)
 
 6.- Crear clientes de WS desde Android con JSON (REST).
 http://mobiforge.com/developing/story/consuming-json-services-android-apps
 
-7.- Determinar si con latitud y longitud se puede obtener la dirección.
+7.- Determinar si con latitud y longitud se puede obtener la dirección. --> TERMINADO
+http://nosoandroid.blogspot.mx/2013/03/obtener-nombre-de-la-localizacion.html
+https://groups.google.com/forum/#!topic/desarrolladores-android/DgUa-StMVuQ
 
 8.- Terminar el desarrollo del Web Service
 http://www.mihogar.mx/recicladf/webService.php
@@ -35,12 +37,46 @@ http://www.mihogar.mx/recicladf/webService.php
 
 10.- Obtener ubicación en el mapa --> TERMINADO
 
-11.- Id de cada marcador
+11.- Id de cada marcador --> EN PROCESO
 http://stackoverflow.com/questions/15368028/getting-a-map-marker-by-its-id-in-google-maps-v2
 
 12.- Obtener polilinea para de ubicación actual y el destino
 https://developers.google.com/maps/documentation/directions/?hl=es
 http://maps.googleapis.com/maps/api/directions/json?origin=19.318697,-99.086855&destination=19.439076,-99.20554&sensor=true
+
+13.- Manejo de pantallas con vistas
+http://www.limecreativelabs.com/viewpagerindicator-y-view-pager-pestanas-android/
+
+14.- Analytics
+https://developers.google.com/analytics/devguides/collection/
+http://www.bugsense.com/
+
+WIDGETS
+https://github.com/Prototik/HoloEverywhere
+
+Pull to refresh
+https://github.com/chrisbanes/Android-PullToRefresh
+
+Menú Lateral
+http://www.limecreativelabs.com/menu-navegacion-lateral-implementacion-ii/
+
+One Piece Pelicula
+https://mega.co.nz/#F!d9EShB7Y!Z2hm13iygh0VaAfqaGMgpQ
+https://mega.co.nz/#!09EGwSrY!PQ6YlSdqqTN3mcPDUZAdYDwTN4BejbEZXkFl5XtzwJI
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 DATOS DE CONEXION:

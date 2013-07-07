@@ -8,6 +8,9 @@
 package mx.com.recicladf;
 
 public final class R {
+    public static final class array {
+        public static final int delegacion=0x7f080000;
+    }
     public static final class attr {
         /** <p>Must be a floating point value, such as "<code>1.2</code>".
 <p>This may also be a reference to a resource (in the form
@@ -182,19 +185,38 @@ containing a value of this type.
         public static final int ic_launcher=0x7f020018;
     }
     public static final class id {
-        public static final int action_settings=0x7f050006;
+        public static final int action_settings=0x7f050015;
+        public static final int button1=0x7f05000e;
+        public static final int button2=0x7f05000f;
+        public static final int calle=0x7f05000a;
+        public static final int centro=0x7f050010;
+        public static final int colonia=0x7f05000b;
+        public static final int comentario=0x7f050011;
         public static final int hybrid=0x7f050004;
-        public static final int map=0x7f050005;
+        public static final int map=0x7f050013;
+        public static final int nombre=0x7f05000d;
         public static final int none=0x7f050000;
         public static final int normal=0x7f050001;
+        public static final int ratingBar1=0x7f050012;
         public static final int satellite=0x7f050002;
+        public static final int spinner1=0x7f050009;
+        public static final int telefono=0x7f05000c;
         public static final int terrain=0x7f050003;
+        public static final int textView1=0x7f050005;
+        public static final int textView2=0x7f050006;
+        public static final int textView3=0x7f050007;
+        public static final int textView4=0x7f050008;
+        public static final int textbox1=0x7f050014;
     }
     public static final class layout {
-        public static final int activity_mapa=0x7f030000;
+        public static final int activity_agregar_centro=0x7f030000;
+        public static final int activity_comentarios=0x7f030001;
+        public static final int activity_mapa=0x7f030002;
     }
     public static final class menu {
-        public static final int mapa=0x7f090000;
+        public static final int agregar_centro=0x7f0a0000;
+        public static final int comentarios=0x7f0a0001;
+        public static final int mapa=0x7f0a0002;
     }
     public static final class string {
         public static final int action_settings=0x7f060016;
@@ -208,6 +230,11 @@ containing a value of this type.
         /**   Requested by string saying which app requested the notification. [CHAR LIMIT=42] 
          */
         public static final int auth_client_requested_by_msg=0x7f060011;
+        public static final int boton1=0x7f060018;
+        public static final int buttonAgregar=0x7f060023;
+        public static final int buttonCancelar=0x7f060024;
+        public static final int buttonComentar=0x7f060025;
+        public static final int calificaCentro=0x7f060022;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
@@ -263,7 +290,14 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f06000e;
+        public static final int delegacionDefault=0x7f06001b;
+        public static final int direccion=0x7f060019;
         public static final int hello_world=0x7f060017;
+        public static final int labelCalle=0x7f06001e;
+        public static final int labelCentro=0x7f060021;
+        public static final int labelColonia=0x7f06001f;
+        public static final int labelNombre=0x7f06001d;
+        public static final int labelTelefono=0x7f060020;
         /**  Location client code resources (prefix with location_client) 
 
         Begin strings for location.reporting
@@ -275,6 +309,8 @@ containing a value of this type.
         public static final int location_client_ulr_inactive_age_under_13=0x7f060012;
         public static final int location_client_ulr_inactive_age_unknown=0x7f060013;
         public static final int location_client_ulr_inactive_unknown_restriction=0x7f060014;
+        public static final int title_activity_agregar_centro=0x7f06001a;
+        public static final int title_activity_comentarios=0x7f06001c;
     }
     public static final class style {
         /** 
@@ -298,11 +334,11 @@ containing a value of this type.
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f080000;
+        public static final int AppBaseTheme=0x7f090000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f080001;
+        public static final int AppTheme=0x7f090001;
     }
     public static final class styleable {
         /** Attributes that can be used with a MapAttrs.
