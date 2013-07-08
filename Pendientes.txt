@@ -64,6 +64,8 @@ http://stackoverflow.com/questions/15924834/decoding-polyline-with-new-google-ma
 18.- Marcador mas cercano
 http://stackoverflow.com/questions/9799005/how-to-search-nearest-google-markers
 
+19.- Al cambiar el mapa de portrait a landscape que no borre lo que está en la pantalla
+
 WIDGETS
 https://github.com/Prototik/HoloEverywhere
 

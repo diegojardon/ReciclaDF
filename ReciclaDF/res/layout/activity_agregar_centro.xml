@@ -116,6 +116,7 @@
         android:layout_alignBottom="@+id/button1"
         android:layout_alignLeft="@+id/spinner1"
         android:layout_marginLeft="23dp"
-        android:text="@string/buttonCancelar" />
+        android:text="@string/buttonCancelar"
+        android:onClick="regresarMapa" />
 
 </RelativeLayout>

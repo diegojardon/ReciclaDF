@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
 import android.widget.EditText;
 
 public class AgregarCentroActivity extends Activity {
@@ -28,6 +29,11 @@ public class AgregarCentroActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.agregar_centro, menu);
 		return true;
+	}
+	
+	public void regresarMapa(View view){
+		Intent intent = new Intent(this, MapaActivity.class);
+		startActivity(intent);
 	}
 
 }
