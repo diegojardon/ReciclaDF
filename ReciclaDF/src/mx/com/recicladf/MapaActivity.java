@@ -20,6 +20,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.location.Address;
@@ -322,8 +323,6 @@ public class MapaActivity extends Activity implements OnMapClickListener, OnMark
 			Toast toast1 = Toast.makeText(getApplicationContext(), "Debes seleccionar un centro de reciclaje", Toast.LENGTH_SHORT);
 		    toast1.show();
 		}*/
-		/*Toast toast1 = Toast.makeText(getApplicationContext(), "Ultimo: "+seleccionado, Toast.LENGTH_SHORT);
-	    toast1.show();*/
 	}
 	
 	@Override
@@ -379,15 +378,15 @@ public class MapaActivity extends Activity implements OnMapClickListener, OnMark
 	
 	public class Ruta extends AsyncTask<String, String, String> {
 
-		//private final ProgressDialog dialog = new ProgressDialog(getBaseContext());
+		ProgressDialog dialog = new ProgressDialog(MapaActivity.this);
 		String ruta = "";
 		
-		/*@Override
+		@Override
 		protected void onPreExecute() {
 		    super.onPreExecute();
 		    dialog.setMessage("Calculando ruta...");
 		    dialog.show();
-		}*/
+		}
 		
 		
 		@Override
@@ -428,8 +427,8 @@ public class MapaActivity extends Activity implements OnMapClickListener, OnMark
 		    return ruta;
 		}
 		
-		/*protected void onPostExecute(List<String> posts) {
+		protected void onPostExecute(String posts) {
 		    dialog.dismiss();
-		}*/
+		}
 	}
 }
