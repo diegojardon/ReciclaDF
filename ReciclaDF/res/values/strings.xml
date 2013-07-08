@@ -5,7 +5,7 @@
     <string name="action_settings">Centros de Reciclaje</string>
     <string name="hello_world">Hello world!</string>
     <string name="boton1">Comentar</string>
-    <string name="direccion">Dirección</string>
+    <string name="direccion">Dirección a buscar</string>
     <string name="title_activity_agregar_centro">Agregar Centro de Reciclaje</string>
     <string name="delegacionDefault">Selecciona</string>
 
@@ -35,6 +35,7 @@
     <string name="labelTelefono">Teléfono:</string>
     <string name="labelCentro">Centro</string>
     <string name="calificaCentro">Califica este centro</string>
+    <string name="ruta">Cómo llegar</string>
     
     <string name="buttonAgregar">Agregar</string>
     <string name="buttonCancelar">Cancelar</string>

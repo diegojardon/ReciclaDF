@@ -51,6 +51,16 @@ http://www.limecreativelabs.com/viewpagerindicator-y-view-pager-pestanas-android
 https://developers.google.com/analytics/devguides/collection/
 http://www.bugsense.com/
 
+15.- Parseo de JSON
+http://www.accella.net/android-http-get-json/
+http://mobile.cs.fsu.edu/parse-json-objects-in-asynctask/
+
+16.- AsyncTask
+http://miguelangellv.wordpress.com/2011/01/31/creando-tareas-asincronas-en-android-con-asynctask/
+
+17.- Decode Polyline
+http://stackoverflow.com/questions/15924834/decoding-polyline-with-new-google-maps-api
+
 WIDGETS
 https://github.com/Prototik/HoloEverywhere
 

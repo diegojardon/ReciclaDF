@@ -55,6 +55,7 @@ int drawable ic_launcher 0x7f020018
 int id action_settings 0x7f050015
 int id button1 0x7f05000e
 int id button2 0x7f05000f
+int id calcularRuta 0x7f050016
 int id calle 0x7f05000a
 int id centro 0x7f050010
 int id colonia 0x7f05000b
@@ -86,9 +87,9 @@ int string auth_client_availability_notification_title 0x7f06000f
 int string auth_client_play_services_err_notification_msg 0x7f060010
 int string auth_client_requested_by_msg 0x7f060011
 int string boton1 0x7f060018
-int string buttonAgregar 0x7f060023
-int string buttonCancelar 0x7f060024
-int string buttonComentar 0x7f060025
+int string buttonAgregar 0x7f060024
+int string buttonCancelar 0x7f060025
+int string buttonComentar 0x7f060026
 int string calificaCentro 0x7f060022
 int string common_google_play_services_enable_button 0x7f060006
 int string common_google_play_services_enable_text 0x7f060005
@@ -116,6 +117,7 @@ int string labelTelefono 0x7f060020
 int string location_client_ulr_inactive_age_under_13 0x7f060012
 int string location_client_ulr_inactive_age_unknown 0x7f060013
 int string location_client_ulr_inactive_unknown_restriction 0x7f060014
+int string ruta 0x7f060023
 int string title_activity_agregar_centro 0x7f06001a
 int string title_activity_comentarios 0x7f06001c
 int style AppBaseTheme 0x7f090000
