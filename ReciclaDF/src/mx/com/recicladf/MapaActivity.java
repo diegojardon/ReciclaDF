@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.ExecutionException;
 
+import mx.com.recicladf.utils.Utilidades;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
@@ -18,7 +20,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.location.Address;
@@ -67,6 +68,9 @@ public class MapaActivity extends Activity implements OnMapClickListener, OnMark
 	
 	String seleccionado = "m0";
 	LatLng posicionSeleccionado;
+	
+	ArrayList<LatLng> centros = new ArrayList<LatLng>();
+	
 	LatLng miUbicacion;
 	
 
@@ -144,6 +148,7 @@ public class MapaActivity extends Activity implements OnMapClickListener, OnMark
         .draggable(true));
        	seleccionado = ultimo.getId();
 		posicionSeleccionado = ultimo.getPosition();
+		centros.add(ultimo.getPosition());
     }
     
     @Override
@@ -264,7 +269,20 @@ public class MapaActivity extends Activity implements OnMapClickListener, OnMark
 	public void trazaRuta(){
 		//Método que traza la ruta de la ubicación actual al último marcador seleccionado
 		PolylineOptions ruta=new PolylineOptions();
-		if(!seleccionado.equals("m0")){
+		
+		float min= 30000000f; 
+		float max;
+		int posMin = 0;
+		
+		for(int total=0; total < centros.size(); total++){
+			max = Utilidades.calculaDistancia((float)miUbicacion.latitude,(float)miUbicacion.longitude,(float)centros.get(total).latitude,(float)centros.get(total).longitude);
+			if(max < min){
+				posMin = total;
+				min = max;
+			}
+		}
+		
+		//if(!seleccionado.equals("m0")){
 			/*Toast toast1 = Toast.makeText(getApplicationContext(),"http://maps.googleapis.com/maps/api/directions/json?origin=" 
 					+miUbicacion.latitude 
 					+ "," 
@@ -282,9 +300,11 @@ public class MapaActivity extends Activity implements OnMapClickListener, OnMark
 						+ "," 
 						+ miUbicacion.longitude
 						+"&destination="
-						+posicionSeleccionado.latitude
+						//+posicionSeleccionado.latitude
+						+centros.get(posMin).latitude
 						+","
-						+posicionSeleccionado.longitude
+						//+posicionSeleccionado.longitude
+						+centros.get(posMin).longitude
 						+"&sensor=true").get();
 				/*Toast toast2 = Toast.makeText(getApplicationContext(), "Cadena: "+rutaCadena, Toast.LENGTH_SHORT);
 			    toast2.show();*/
@@ -298,10 +318,10 @@ public class MapaActivity extends Activity implements OnMapClickListener, OnMark
 				
 			}catch(ExecutionException ee){
 			}catch(InterruptedException ie){}
-		}else{
+		/*}else{
 			Toast toast1 = Toast.makeText(getApplicationContext(), "Debes seleccionar un centro de reciclaje", Toast.LENGTH_SHORT);
 		    toast1.show();
-		}
+		}*/
 		/*Toast toast1 = Toast.makeText(getApplicationContext(), "Ultimo: "+seleccionado, Toast.LENGTH_SHORT);
 	    toast1.show();*/
 	}

@@ -35,7 +35,7 @@
     <string name="labelTelefono">Teléfono:</string>
     <string name="labelCentro">Centro</string>
     <string name="calificaCentro">Califica este centro</string>
-    <string name="ruta">Cómo llegar</string>
+    <string name="ruta">Ruta al centro más cercano</string>
     
     <string name="buttonAgregar">Agregar</string>
     <string name="buttonCancelar">Cancelar</string>
