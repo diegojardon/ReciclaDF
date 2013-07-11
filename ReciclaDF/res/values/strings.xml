@@ -36,9 +36,9 @@
     <string name="labelCentro">Centro</string>
     <string name="calificaCentro">Califica este centro</string>
     <string name="ruta">Ruta al centro más cercano</string>
-    
     <string name="buttonAgregar">Agregar</string>
     <string name="buttonCancelar">Cancelar</string>
     <string name="buttonComentar">Comentar</string>
+    <string name="title_activity_splash_screen">ReciclaDF</string>
 
 </resources>

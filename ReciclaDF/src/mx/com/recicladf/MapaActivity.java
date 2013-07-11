@@ -84,7 +84,7 @@ public class MapaActivity extends Activity implements OnMapClickListener, OnMark
         
         //map.setMapType(map.MAP_TYPE_NORMAL);
         
-        //map.setMyLocationEnabled(true);
+        map.setMyLocationEnabled(true);
         map.setOnMapClickListener(this);
     	map.setOnMarkerDragListener(this);
     	map.setOnInfoWindowClickListener(this);
@@ -111,7 +111,7 @@ public class MapaActivity extends Activity implements OnMapClickListener, OnMark
         	
         	miUbicacion = new LatLng(location.getLatitude(),location.getLongitude());
         	//if (map.getMyLocation() != null){        	
-        		map.animateCamera(CameraUpdateFactory.newLatLngZoom(
+        	map.animateCamera(CameraUpdateFactory.newLatLngZoom(
         				miUbicacion, 15));
         		        	
         		map.addMarker(new MarkerOptions()

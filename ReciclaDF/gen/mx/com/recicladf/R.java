@@ -183,17 +183,19 @@ containing a value of this type.
         public static final int common_signin_btn_text_pressed_dark=0x7f020016;
         public static final int common_signin_btn_text_pressed_light=0x7f020017;
         public static final int ic_launcher=0x7f020018;
+        public static final int splash=0x7f020019;
     }
     public static final class id {
-        public static final int action_settings=0x7f050015;
+        public static final int action_settings=0x7f050016;
         public static final int button1=0x7f05000e;
         public static final int button2=0x7f05000f;
-        public static final int calcularRuta=0x7f050016;
+        public static final int calcularRuta=0x7f050017;
         public static final int calle=0x7f05000a;
         public static final int centro=0x7f050010;
         public static final int colonia=0x7f05000b;
         public static final int comentario=0x7f050011;
         public static final int hybrid=0x7f050004;
+        public static final int imageView1=0x7f050015;
         public static final int map=0x7f050013;
         public static final int nombre=0x7f05000d;
         public static final int none=0x7f050000;
@@ -213,11 +215,13 @@ containing a value of this type.
         public static final int activity_agregar_centro=0x7f030000;
         public static final int activity_comentarios=0x7f030001;
         public static final int activity_mapa=0x7f030002;
+        public static final int activity_splash_screen=0x7f030003;
     }
     public static final class menu {
         public static final int agregar_centro=0x7f0a0000;
         public static final int comentarios=0x7f0a0001;
         public static final int mapa=0x7f0a0002;
+        public static final int splash_screen=0x7f0a0003;
     }
     public static final class string {
         public static final int action_settings=0x7f060016;
@@ -313,6 +317,7 @@ containing a value of this type.
         public static final int ruta=0x7f060023;
         public static final int title_activity_agregar_centro=0x7f06001a;
         public static final int title_activity_comentarios=0x7f06001c;
+        public static final int title_activity_splash_screen=0x7f060027;
     }
     public static final class style {
         /** 
