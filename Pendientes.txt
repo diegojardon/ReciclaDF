@@ -19,8 +19,6 @@ map.setOnMapLongClickListener(new OnMapLongClickListener() {
             }
         });
 
-4.- Cambiar icono al dar click en un marcador (Revisar si aplica) --> NO APLICA
-
 5.- Agregar formulario en un Activity --> TERMINADO (SOLO EL DISEÑO)
 
 6.- Crear clientes de WS desde Android con JSON (REST).
@@ -30,7 +28,7 @@ http://mobiforge.com/developing/story/consuming-json-services-android-apps
 http://nosoandroid.blogspot.mx/2013/03/obtener-nombre-de-la-localizacion.html
 https://groups.google.com/forum/#!topic/desarrolladores-android/DgUa-StMVuQ
 
-8.- Terminar el desarrollo del Web Service
+8.- Terminar el desarrollo del Web Service --> EN PROCESO
 http://www.mihogar.mx/recicladf/webService.php
 
 9.- Cambiar icono del App --> TERMINADO
@@ -40,7 +38,7 @@ http://www.mihogar.mx/recicladf/webService.php
 11.- Id de cada marcador --> EN PROCESO
 http://stackoverflow.com/questions/15368028/getting-a-map-marker-by-its-id-in-google-maps-v2
 
-12.- Obtener polilinea para de ubicación actual y el destino
+12.- Obtener polilinea desde ubicación actual hasta destino --> TERMINADO
 https://developers.google.com/maps/documentation/directions/?hl=es
 http://maps.googleapis.com/maps/api/directions/json?origin=19.318697,-99.086855&destination=19.439076,-99.20554&sensor=true
 
@@ -51,20 +49,44 @@ http://www.limecreativelabs.com/viewpagerindicator-y-view-pager-pestanas-android
 https://developers.google.com/analytics/devguides/collection/
 http://www.bugsense.com/
 
-15.- Parseo de JSON
+15.- Parseo de JSON --> TERMINADO
 http://www.accella.net/android-http-get-json/
 http://mobile.cs.fsu.edu/parse-json-objects-in-asynctask/
 
-16.- AsyncTask
+16.- AsyncTask --> TERMINADO
 http://miguelangellv.wordpress.com/2011/01/31/creando-tareas-asincronas-en-android-con-asynctask/
 
-17.- Decode Polyline
+17.- Decode Polyline --> TERMINADO
 http://stackoverflow.com/questions/15924834/decoding-polyline-with-new-google-maps-api
 
-18.- Marcador mas cercano
+18.- Marcador mas cercano --> TERMINADO
 http://stackoverflow.com/questions/9799005/how-to-search-nearest-google-markers
 
-19.- Al cambiar el mapa de portrait a landscape que no borre lo que está en la pantalla
+19.- Al cambiar el mapa de portrait a landscape que no borre lo que está en la pantalla (bloquear landscape) --> TERMINADO
+
+20.- Login con Facebook
+
+21.- Android SQLite
+http://www.sgoliver.net/blog/?p=1611
+
+22.- Enviar datos desde formulario android con POST
+http://stackoverflow.com/questions/2938502/sending-post-data-in-android
+
+23.- Escribir en un archivo Android
+http://developer.android.com/training/basics/data-storage/files.html
+
+24.- Escribir en cache Android
+http://developer.android.com/guide/topics/data/data-storage.html
+
+25.- Validaciones Formularios
+
+26.- Cambiar imagenes botones Android
+Image Button
+
+27.- Layouts Android
+
+
+
 
 WIDGETS
 https://github.com/Prototik/HoloEverywhere
@@ -75,12 +97,21 @@ https://github.com/chrisbanes/Android-PullToRefresh
 Menú Lateral
 http://www.limecreativelabs.com/menu-navegacion-lateral-implementacion-ii/
 
-One Piece Pelicula
-https://mega.co.nz/#F!d9EShB7Y!Z2hm13iygh0VaAfqaGMgpQ
-https://mega.co.nz/#!09EGwSrY!PQ6YlSdqqTN3mcPDUZAdYDwTN4BejbEZXkFl5XtzwJI
+Métodos Web Service:
+	a) Obtener todos los id's de centros de reciclaje
+	b) Obtener datos de un centro por id
+	c) Insertar centro de reciclaje con todos sus datos
+	d) Obtener cada 5 comentarios por id de centro de reciclaje
+	e) Obtener promedio rating por id de centro de reciclaje
+	f) Insertar comentario
+	g) Insertar usuario
 
-
-
+Métodos consultas BD Interna:
+	a) Obtener todos los id's de centros de reciclaje
+	b) Obtener datos de un centro por id
+	c) Insertar centro de reciclaje por id
+	d) Borrar centro de reciclaje por id
+	e) Buscar centro por tipo de material
 
 
 
