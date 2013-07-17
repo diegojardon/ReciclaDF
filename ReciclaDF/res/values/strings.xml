@@ -36,6 +36,7 @@
     <string name="labelCentro">Centro</string>
     <string name="calificaCentro">Califica este centro</string>
     <string name="ruta">Ruta al centro más cercano</string>
+    <string name="rutaCaminar">Ruta al centro más cercano a pie</string>
     <string name="buttonAgregar">Agregar</string>
     <string name="buttonCancelar">Cancelar</string>
     <string name="buttonComentar">Comentar</string>

@@ -10,5 +10,10 @@
         android:id="@+id/calcularRuta"
         android:showAsAction="never"
         android:title="@string/ruta"/>
+    
+    <item
+        android:id="@+id/calcularRutaCaminar"
+        android:showAsAction="never"
+        android:title="@string/rutaCaminar"/>
 
 </menu>

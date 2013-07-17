@@ -86,8 +86,6 @@ Image Button
 27.- Layouts Android
 
 
-
-
 WIDGETS
 https://github.com/Prototik/HoloEverywhere
 
@@ -105,6 +103,7 @@ Métodos Web Service:
 	e) Obtener promedio rating por id de centro de reciclaje
 	f) Insertar comentario
 	g) Insertar usuario
+	h) Obtener el centro mas cercano
 
 Métodos consultas BD Interna:
 	a) Obtener todos los id's de centros de reciclaje
@@ -116,15 +115,7 @@ Métodos consultas BD Interna:
 
 
 
-
-
-
-
-
-
-
-
-
+	
 DATOS DE CONEXION:
 
 MIHOGAR.MX

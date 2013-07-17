@@ -36,6 +36,9 @@
 			//Insertar comentario
 			agregarComentario();
 		break;
+		case "107":
+			obtenerCentroMasCercano();
+		break;
 		default:
 			echo "default";
 		break;
@@ -109,6 +112,17 @@
 	
 	function agregarComentario(){
 		//PENDIENTE
+	}
+	
+	function obtenerCentroMasCercano(){
+		$latitud = isset($_POST['miLat']) ? $_POST['miLat'] : "";
+		$longitud = isset($_POST['miLon']) ? $_POST['miLon'] : "";
+		
+		//Calculamos la distancia hacia todos los centros
+		if(strcmp($latitud,"") != 0){
+			//PENDIENTE
+		}
+	
 	}
 		
 	

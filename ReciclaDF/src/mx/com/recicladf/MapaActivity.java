@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.StringTokenizer;
 import java.util.concurrent.ExecutionException;
 
 import mx.com.recicladf.utils.Utilidades;
@@ -53,13 +54,10 @@ public class MapaActivity extends Activity implements OnMapClickListener, OnMark
 													  LocationListener, OnInfoWindowClickListener,
 													  OnMarkerClickListener{
 
-	//static final LatLng PLAZA_CARSO = new LatLng(19.44207,-99.203628);
-	
 	//definicion de constante para el Intent
 	public final static String EXTRA_DIRECCION = "mx.com.recicladf.MESSAGE_DIRECCION";
 	public final static String EXTRA_COLONIA = "mx.com.recicladf.MESSAGE_COLONIA";
-	//public final static String EXTRA_MARCADOR = "mx.com.recicladf.MESSAGE_MARCADOR";
-	
+		
 	private GoogleMap map;
 	private Geocoder geoCoder;
 	
@@ -71,6 +69,7 @@ public class MapaActivity extends Activity implements OnMapClickListener, OnMark
 	LatLng posicionSeleccionado;
 	
 	ArrayList<LatLng> centros = new ArrayList<LatLng>();
+	ArrayList<String> cargados = new ArrayList<String>();
 	
 	LatLng miUbicacion;
 	
@@ -79,6 +78,16 @@ public class MapaActivity extends Activity implements OnMapClickListener, OnMark
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mapa);
+        
+        cargados = getIntent().getExtras().getStringArrayList(SplashScreenActivity.EXTRA_CENTROS);
+        
+        /*if(cargados != null){
+        	Toast toast1 = Toast.makeText(getApplicationContext(), "Latitud: "+cargados.get(0), Toast.LENGTH_SHORT);
+        	toast1.show();
+        }else{
+        	Toast toast1 = Toast.makeText(getApplicationContext(), "Vacio", Toast.LENGTH_SHORT);
+        	toast1.show();
+        }*/
         
         map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
         
@@ -89,11 +98,30 @@ public class MapaActivity extends Activity implements OnMapClickListener, OnMark
     	map.setOnMarkerDragListener(this);
     	map.setOnInfoWindowClickListener(this);
         
-    	
-        
+    	double latitud;
+    	double longitud;
+    	String id;
+    	LatLng agrega;
         //Validamos si hubo problemas al obtener el mapa
         if (map != null) {
-
+        	
+        	//Cargamos los centros de reciclaje
+        	for(int i=0;i<cargados.size();i++){
+        		
+        		StringTokenizer token = new StringTokenizer(cargados.get(i),",");
+        		id = token.nextToken();
+        		latitud = Double.parseDouble(token.nextToken());
+        		longitud = Double.parseDouble(token.nextToken());
+        		agrega = new LatLng(latitud, longitud);
+        		centros.add(agrega);
+        		map.addMarker(new MarkerOptions()
+               	.position(agrega)
+               	.title("Centro de Reciclaje")
+                .snippet("Datos Básicos" + id)
+               	.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+                .draggable(true));
+        	}
+        	
         	
         	geoCoder = new Geocoder(getBaseContext(), Locale.getDefault());
         	
@@ -267,9 +295,9 @@ public class MapaActivity extends Activity implements OnMapClickListener, OnMark
 		startActivity(intentComentarios);
 	}
 	
-	public void trazaRuta(){
+	public void trazaRuta(String transporte){
 		//Método que traza la ruta de la ubicación actual al último marcador seleccionado
-		PolylineOptions ruta=new PolylineOptions();
+		
 		
 		float min= 30000000f; 
 		float max;
@@ -295,8 +323,8 @@ public class MapaActivity extends Activity implements OnMapClickListener, OnMark
 					+"&sensor=true", Toast.LENGTH_LONG);
 		    toast1.show();*/
 			
-			try{
-				String rutaCadena = new Ruta().execute("http://maps.googleapis.com/maps/api/directions/json?origin="
+			//try{
+				new Ruta().execute("http://maps.googleapis.com/maps/api/directions/json?origin="
 						+ miUbicacion.latitude 
 						+ "," 
 						+ miUbicacion.longitude
@@ -306,19 +334,13 @@ public class MapaActivity extends Activity implements OnMapClickListener, OnMark
 						+","
 						//+posicionSeleccionado.longitude
 						+centros.get(posMin).longitude
-						+"&sensor=true").get();
+						+"&sensor=true&mode="+transporte);
 				/*Toast toast2 = Toast.makeText(getApplicationContext(), "Cadena: "+rutaCadena, Toast.LENGTH_SHORT);
 			    toast2.show();*/
-				ArrayList<LatLng> puntos = decodePoly(rutaCadena);
-				for(int i=0;i<puntos.size();i++){
-					ruta.add(new LatLng(puntos.get(i).latitude, puntos.get(i).longitude));
-				}
-				ruta.color(Color.BLUE).width(7);
-				ruta.zIndex(10f);
-				map.addPolyline(ruta);
 				
-			}catch(ExecutionException ee){
-			}catch(InterruptedException ie){}
+				
+			//}catch(ExecutionException ee){
+			//}catch(InterruptedException ie){}
 		/*}else{
 			Toast toast1 = Toast.makeText(getApplicationContext(), "Debes seleccionar un centro de reciclaje", Toast.LENGTH_SHORT);
 		    toast1.show();
@@ -330,8 +352,11 @@ public class MapaActivity extends Activity implements OnMapClickListener, OnMark
 	    // Handle item selection
 	    switch (item.getItemId()) {
 	        case R.id.calcularRuta:
-	            trazaRuta();
+	            trazaRuta("driving");
 	            return true;
+	        case R.id.calcularRutaCaminar:
+	        	trazaRuta("walking");
+	        	return true;	
 	        default:
 	            return super.onOptionsItemSelected(item);
 	    }
@@ -427,8 +452,18 @@ public class MapaActivity extends Activity implements OnMapClickListener, OnMark
 		    return ruta;
 		}
 		
-		protected void onPostExecute(String posts) {
-		    dialog.dismiss();
+		protected void onPostExecute(String rutaCadena) {
+			
+			PolylineOptions ruta=new PolylineOptions();
+			ArrayList<LatLng> puntos = decodePoly(rutaCadena);
+			for(int i=0;i<puntos.size();i++){
+				ruta.add(new LatLng(puntos.get(i).latitude, puntos.get(i).longitude));
+			}
+			ruta.color(Color.BLUE).width(7);
+			ruta.zIndex(10f);
+			map.addPolyline(ruta);
+			
+			dialog.dismiss();
 		}
 	}
 }

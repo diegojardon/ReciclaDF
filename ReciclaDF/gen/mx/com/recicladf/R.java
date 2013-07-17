@@ -186,16 +186,17 @@ containing a value of this type.
         public static final int splash=0x7f020019;
     }
     public static final class id {
-        public static final int action_settings=0x7f050016;
+        public static final int action_settings=0x7f050015;
         public static final int button1=0x7f05000e;
         public static final int button2=0x7f05000f;
-        public static final int calcularRuta=0x7f050017;
+        public static final int calcularRuta=0x7f050016;
+        public static final int calcularRutaCaminar=0x7f050017;
         public static final int calle=0x7f05000a;
         public static final int centro=0x7f050010;
         public static final int colonia=0x7f05000b;
         public static final int comentario=0x7f050011;
         public static final int hybrid=0x7f050004;
-        public static final int imageView1=0x7f050015;
+        public static final int imageView1=0x7f050014;
         public static final int map=0x7f050013;
         public static final int nombre=0x7f05000d;
         public static final int none=0x7f050000;
@@ -209,7 +210,6 @@ containing a value of this type.
         public static final int textView2=0x7f050006;
         public static final int textView3=0x7f050007;
         public static final int textView4=0x7f050008;
-        public static final int textbox1=0x7f050014;
     }
     public static final class layout {
         public static final int activity_agregar_centro=0x7f030000;
@@ -236,9 +236,9 @@ containing a value of this type.
          */
         public static final int auth_client_requested_by_msg=0x7f060011;
         public static final int boton1=0x7f060018;
-        public static final int buttonAgregar=0x7f060024;
-        public static final int buttonCancelar=0x7f060025;
-        public static final int buttonComentar=0x7f060026;
+        public static final int buttonAgregar=0x7f060025;
+        public static final int buttonCancelar=0x7f060026;
+        public static final int buttonComentar=0x7f060027;
         public static final int calificaCentro=0x7f060022;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
@@ -315,9 +315,10 @@ containing a value of this type.
         public static final int location_client_ulr_inactive_age_unknown=0x7f060013;
         public static final int location_client_ulr_inactive_unknown_restriction=0x7f060014;
         public static final int ruta=0x7f060023;
+        public static final int rutaCaminar=0x7f060024;
         public static final int title_activity_agregar_centro=0x7f06001a;
         public static final int title_activity_comentarios=0x7f06001c;
-        public static final int title_activity_splash_screen=0x7f060027;
+        public static final int title_activity_splash_screen=0x7f060028;
     }
     public static final class style {
         /** 
