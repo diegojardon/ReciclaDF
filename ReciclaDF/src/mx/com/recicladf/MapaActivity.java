@@ -323,7 +323,6 @@ public class MapaActivity extends Activity implements OnMapClickListener, OnMark
 					+"&sensor=true", Toast.LENGTH_LONG);
 		    toast1.show();*/
 			
-			//try{
 				new Ruta().execute("http://maps.googleapis.com/maps/api/directions/json?origin="
 						+ miUbicacion.latitude 
 						+ "," 
@@ -335,12 +334,6 @@ public class MapaActivity extends Activity implements OnMapClickListener, OnMark
 						//+posicionSeleccionado.longitude
 						+centros.get(posMin).longitude
 						+"&sensor=true&mode="+transporte);
-				/*Toast toast2 = Toast.makeText(getApplicationContext(), "Cadena: "+rutaCadena, Toast.LENGTH_SHORT);
-			    toast2.show();*/
-				
-				
-			//}catch(ExecutionException ee){
-			//}catch(InterruptedException ie){}
 		/*}else{
 			Toast toast1 = Toast.makeText(getApplicationContext(), "Debes seleccionar un centro de reciclaje", Toast.LENGTH_SHORT);
 		    toast1.show();
