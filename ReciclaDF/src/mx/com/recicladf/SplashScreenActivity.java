@@ -1,17 +1,6 @@
 package mx.com.recicladf;
 
-import java.io.IOException;
 import java.util.ArrayList;
-
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.util.EntityUtils;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import mx.com.recicladf.model.Centros_SQLHelper;
 import android.app.Activity;
@@ -74,7 +63,7 @@ public class SplashScreenActivity extends Activity{
 					        jsonExcep.printStackTrace();
 					    }*/
 						
-					/*	Cursor c = db.rawQuery("SELECT id, latitud, longitud FROM CentroReciclaje", null);
+						Cursor c = db.rawQuery("SELECT id, latitud, longitud FROM CentroReciclaje", null);
 						
 						if(!c.moveToFirst()){
 							//Insercion de prueba
@@ -100,7 +89,7 @@ public class SplashScreenActivity extends Activity{
 						db.close();
 						
 						//Realizamos la comparacion de los centros locales contra los remotos
-						 */
+						 
 						
 					    Intent menuPrincipal = new Intent(SplashScreenActivity.this, MapaActivity.class);
 				        menuPrincipal.putStringArrayListExtra(EXTRA_CENTROS, centros);
